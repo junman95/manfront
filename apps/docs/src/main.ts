@@ -1,22 +1,27 @@
-import { Header } from "@repo/ui/header";
 import "./style.css";
 import { Counter } from "@repo/ui/counter";
-import { setupCounter } from "@repo/ui/setup-counter";
-import typescriptLogo from "/typescript.svg";
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    ${Header({ title: "Docs" })}
-    <div class="card">
-      ${Counter()}
-    </div>
-  </div>
+const counter = new Counter({
+  initialValue: 10,
+  step: 5,
+  onChange: (value) => console.log("Counter value:", value),
+});
+
+const logo = document.createElement("img");
+logo.src = "./typescript.svg";
+logo.style = "width: 100px; height: 100px";
+
+const app = document.createElement("div");
+app.classList.add("app");
+app.appendChild(logo);
+app.appendChild(counter.render());
+
+app.style = `
+  width:100vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
 `;
-
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+document.body.appendChild(app);
