@@ -1,84 +1,33 @@
-# manfront
+# `Turborepo` Vite starter
 
-Modern TypeScript project with a powerful tech stack for frontend development.
+This is a community-maintained example. If you experience a problem, please submit a pull request with a fix. GitHub Issues will be closed.
 
-## Tech Stack
+## Using this example
 
-- **Framework**: rune-ts - Reactive UI framework
-- **ORM**: Drizzle - Lightweight and performant TypeScript ORM
-- **Validation**: Zod - TypeScript-first schema validation
-- **Code Quality**: Biome - Fast formatter and linter
-- **Build Tool**: Vite - Next generation frontend tooling
-- **Utilities**: fxts - Functional programming utilities
-- **Documentation**: Storybook - Component development environment
-- **Git Hooks**: Husky - Git hooks management
+Run the following command:
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js (version 18 or higher)
-- npm or yarn
-
-### Installation
-
-1. Install dependencies:
-
-```bash
-npm install
+```sh
+npx create-turbo@latest -e with-vite
 ```
 
-2. Start the development server:
+## What's inside?
 
-```bash
-npm run dev
-```
+This Turborepo includes the following packages and apps:
 
-### Available Scripts
+### Apps and Packages
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run type-check` - Run TypeScript type checking
-- `npm run lint` - Run Biome linter
-- `npm run lint:fix` - Fix linting issues
-- `npm run format` - Format code with Biome
-- `npm run storybook` - Start Storybook development server
-- `npm run build-storybook` - Build Storybook for production
+- `docs`: a vanilla [vite](https://vitejs.dev) ts app
+- `web`: another vanilla [vite](https://vitejs.dev) ts app
+- `@repo/ui`: a stub component & utility library shared by both `web` and `docs` applications
+- `@repo/eslint-config`: shared `eslint` configurations
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
-## Project Structure
+Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-```
-manfront/
-├── src/
-│   ├── index.ts          # Main entry point
-│   └── index.stories.tsx # Storybook stories
-├── .storybook/           # Storybook configuration
-├── .github/              # GitHub specific files
-├── dist/                 # Build output
-├── biome.json           # Biome configuration
-├── package.json         # Project dependencies and scripts
-├── tsconfig.json        # TypeScript configuration
-├── vite.config.ts       # Vite configuration
-└── README.md           # This file
-```
+### Utilities
 
-## Development Workflow
+This Turborepo has some additional tools already setup for you:
 
-1. **Code Quality**: Biome handles both formatting and linting
-2. **Type Safety**: TypeScript with strict configuration
-3. **Git Hooks**: Husky ensures code quality before commits
-4. **Component Development**: Storybook for isolated component development
-5. **Functional Programming**: fxts for functional utilities
-6. **Data Validation**: Zod for runtime type validation
-
-## Contributing
-
-1. Make sure all tests pass
-2. Format code with `npm run format`
-3. Fix any linting issues with `npm run lint:fix`
-4. Commit your changes (Husky will run pre-commit hooks)
-
-## License
-
-MIT
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
