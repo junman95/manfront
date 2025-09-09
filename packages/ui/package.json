@@ -2,14 +2,20 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "exports": {
-    "./counter": "./components/counter.ts",
-    "./header": "./components/header.ts",
+    "./counter": "./components/molecule/counter/counter.ts",
+    "./header": "./components/molecule/header/header.ts",
     "./setup-counter": "./utils/counter.ts"
   },
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
+    "@storybook/addon-docs": "^9.1.5",
+    "@storybook/html-vite": "^9.1.5",
+    "storybook": "^9.1.5",
     "typescript": "5.5.4"
   },
   "peerDependencies": {
