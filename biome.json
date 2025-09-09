@@ -1,8 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "root": true,
+  "$schema": "https://biomejs.dev/schemas/2.2.3/schema.json",
   "linter": {
     "enabled": true,
     "rules": {
@@ -37,25 +35,16 @@
       "attributePosition": "auto"
     }
   },
-  "json": {
-    "formatter": {
-      "enabled": true
-    }
-  },
   "files": {
-    "include": [
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.js",
-      "**/*.jsx",
-      "**/*.json"
-    ],
-    "ignore": [
-      "**/node_modules/**",
-      "**/dist/**",
-      "**/build/**",
-      "**/.turbo/**",
-      "**/coverage/**"
+    "ignoreUnknown": true,
+    "includes": [
+      "**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/build",
+      "!**/.{biome,git,vscode}/*",
+      "!**/*.config.{js,ts}",
+      "!**/*.json"
     ]
   }
 }

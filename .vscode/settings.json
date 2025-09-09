@@ -3,5 +3,32 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+  // Biome 설정
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome":"explicit",
+  },
+
+  // 파일별 포맷터 지정
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+  
+  // 다른 포맷터 비활성화 (충돌 방지)
+  "eslint.format.enable": false,
+  
 }
