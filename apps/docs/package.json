@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*"
+    "@repo/ui": "workspace:*",
+    "rune-ts": "^0.9.4"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
