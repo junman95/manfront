@@ -1,4 +1,5 @@
 import { type Html, html, on, View } from "rune-ts";
+import styles from "./counter.module.scss";
 
 export interface CounterParams {
   initialValue?: number;
@@ -9,10 +10,10 @@ export interface CounterParams {
 export class Counter extends View<CounterParams> {
   protected override template(): Html {
     return html`
-    <div>
-      <button>빼기 </button>
-      <span>${this.data.initialValue || 0}</span>
-      <button>더하기 </button>
+    <div class="${styles.container}">
+      <button class="${styles.ctaButton}">빼기 </button>
+      <span class="${styles.label}">${this.data.initialValue || 0}</span>
+      <button class="${styles.ctaButton}">더하기 </button>
     </div>`;
   }
 

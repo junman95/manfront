@@ -1,4 +1,4 @@
-import "./style.css";
+import "./style.scss";
 import { Counter } from "@repo/ui/counter";
 
 const counter = new Counter({

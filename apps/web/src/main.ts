@@ -2,7 +2,7 @@ import { ExCounter } from "@repo/ui/ex-counter";
 import { Header } from "@repo/ui/header";
 import { setupCounter } from "@repo/ui/setup-counter";
 import typescriptLogo from "/typescript.svg";
-import "./style.css";
+import "./style.scss";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
