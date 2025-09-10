@@ -1,4 +1,4 @@
-import { Counter } from "@repo/ui/counter";
+import { ExCounter } from "@repo/ui/ex-counter";
 import { Header } from "@repo/ui/header";
 import { setupCounter } from "@repo/ui/setup-counter";
 import typescriptLogo from "/typescript.svg";
@@ -14,7 +14,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     </a>
     ${Header({ title: "Web" })}
     <div class="card">
-      ${Counter()}
+      ${ExCounter()}
     </div>
   </div>
 `;

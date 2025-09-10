@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "exports": {
     "./counter": "./components/molecule/counter/counter.ts",
-    "./header": "./components/molecule/header/header.ts",
+    "./header": "./components/header.ts",
+    "./ex-counter": "./components/ex-counter.ts",
     "./setup-counter": "./utils/counter.ts"
   },
   "license": "MIT",
